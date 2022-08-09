@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/164afc97fd.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet" />
+    <title>Bookly</title>
+    <div class="container">
+        <h1><span>Bookly</span></h1>
+        <nav class="navBar">
+            <div class="plug">
+                <input class="" placeholder="search" id="input" />
+                <a href="#bookLink"><button id="book-btn" class="bookLink" onclick="getBooks()">
+                    Get Book 
+                </button></a>
+
+                <input id="inputYear">
+                <button id = "year-btn" onclick="getYear()"> Book by Year</button>
+
+            </div>
+            <a href="#about" class="about">About</a>
+            <a href="#subscribe" class="Subscribe">Contact</a>
+            <a href="#contact" class="Contact">Share</a>
+        </nav>
+    </div>
+    <break></break>
+    <div class="mobileContainer">
+        <h2><span>Bookly</span></h2>
+        <nav class="mobileBar">
+            <div class="menu">
+                <div class="menuButton"><button class="menuBtn">Menu</button></div>
+                <div class="closeButton">
+                    <button class="menuBtn">Close</button>
+                </div>
+                <div class="dropDown">
+                    <div class="plug">
+                        <input class="" id="input2" />
+                        <button id="book-btn2" class="bookLink" onclick="getBooks2()">
+                            Book by name
+                        </button>
+                        <input id="inputYear">
+                        <button id = "year-btn2" onclick="getYear()">Book by Year</button>
+                    </div>
+                    <a href="#about" class="nav-tabs hoverable mx-4">About</a>
+                    <a href="#subscribe" class="nav-tabs hoverable mx-4">Contact</a>
+                    <a href="#contact" class="nav-tabs hoverable mx-4">Share</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</head>
+
+<body>
+    <header>
+      
+    </header>
+
+    <main>
+        <section id="home" class="banner">
+            <div class="container">
+                <div class="content">
+                    <h1 class="quote-text center mx-4">“Don't be a stinker, be a thinker.”<strong>Apollo Creed</strong></h1>
+                    
+                </div>
+                <div class="book">
+                    <figure class="img-box-box">
+                        
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="books" id="bookLink">
+            <div class="container">
+                <div class="books-grid">
+                    <div id="output" class="bookPut"></div>
+                </div>
+                <div id="outputYear"></div>
+                <div id="outputYear2"></div>
+                <div class="books-grid">
+                    <div id="output2" class="bookPut"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="containter">
+                <h2>About Bookly</h2>
+                <div class="about-grid">
+                    <div class="content">
+                        <p>
+                            Building towards a web page for every book published. 
+                            Bookly is hard at work improving the experience it offers to students and teachers in the classrooms.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Share</h2>
+                <div class="contact-grid">
+                    <div class="link">
+                        
+                        <div class="content">
+                            <a href="https://www.facebook.com/" target="_blank" class="button"><i
+                                    class="fab fa-facebook-square"></i> Facebook</a>
+                        </div>
+                    </div>
+                    <div class="link">
+                        
+                        <div class="content">
+                            <a href="https://www.instagram.com/" target="_blank" class="button" button><i
+                                    class="fa-brands fa-instagram"></i>Instagram</a>
+                        </div>
+                    </div>
+                    <div class="link">
+                        
+                        <div class="content">
+                            <a href="https://twitter.com/i/flow/login" target="_blank" class="button"><i
+                                    class="fab fa-twitter"></i> Twitter</a>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="p-2">Suggestions</h2>
+                <form>
+                    <div class="form-grid">
+                        <input type="text" name="name" id="name" placeholder="name" class="form-element" />
+                        <input type="email" name="email" id="email" placeholder="email" class="form-element" />
+                        <textarea name="message" id="message" placeholder="Message" class="form-area"></textarea>
+                    </div>
+                    <div class="align">
+                        <input type="submit" value="Send Message" class="button" />
+                </form>
+                
+            </div>
+        </section>
+
+        <section id="Sub" class="Sub">
+            <div class="container">
+                <div class="sub-grid">
+
+                </div>
+            </div>
+        </section>
+    </main>
+<script> $(document).ready(function(){
+    $("#book-btn").click(function(){
+        $("#home").hide();
+    })
+})
+
+$(document).ready(function(){
+    $("#year-btn").click(function(){
+        $("#home").hide();
+    })
+})
+
+</script>
+    <footer>
+        <div class="footBox">
+           <p>© 2022 Copyright Bookly</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
